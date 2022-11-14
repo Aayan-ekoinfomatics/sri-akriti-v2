@@ -21,6 +21,8 @@ import AboutUs from "./components/pages/AboutUs";
 import SingleCategoryProducts from "./components/pages/SingleCategoryProducts";
 import CategoryPage from "./components/pages/CategoryPage";
 import Login from "./components/pages/Login";
+import SignUp from "./components/pages/SignUp";
+import Account from "./components/pages/Account";
 
 function App() {
   const [navToggle, setNavToggle] = useRecoilState(SidebarAtom);
@@ -62,6 +64,8 @@ function App() {
           <Route path="*" element={<Navigate replace to='/' />} />
           <Route path="/product-details" element={<Productpage />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/account" element={<Account />} />
           <Route
             path="/single-category/:category_id"
             element={<CategoryPage />}
