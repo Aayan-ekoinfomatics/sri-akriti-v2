@@ -6,9 +6,9 @@ const Footer = () => {
       {/* desktop view */}
       <div className='w-full hidden md:flex flex-col items-center pt-10'>
         <div className='text-md lora pb-6 w-full text-center tracking-[0.1em]' >Subscribe now to our newsletter for more news</div>
-        <div className='p-6 pb-10 w-[60%] lg:w-[40%] flex justify-center'>
-          <input type="text" placeholder='Email' className='px-6 py-5 pl-8 text-[21px] tracking-[0.02em] w-full placeholder:text-[#acacaca2] outline-none border poppins' />
-          <div className='bg-black text-white poppins text-md lg:text-xl font-light tracking-[0.4em] flex justify-center items-center cursor-pointer px-6 pl-8 lg:px-8 lg:pl-10'>
+        <div className='p-4 pb-10 w-[60%] lg:w-[40%] flex justify-center'>
+          <input type="text" placeholder='Email' className='px-6 py-3 pl-8 text-[21px] tracking-[0.02em] w-full placeholder:text-[#acacaca2] outline-none border poppins' />
+          <div className='bg-black text-white poppins text-md lg:text-[20px] font-light tracking-[0.4em] flex justify-center items-center cursor-pointer px-6 pl-8 lg:px-8 lg:pl-10'>
             SUBMIT
           </div>
         </div>

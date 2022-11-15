@@ -23,6 +23,8 @@ import CategoryPage from "./components/pages/CategoryPage";
 import Login from "./components/pages/Login";
 import SignUp from "./components/pages/SignUp";
 import Account from "./components/pages/Account";
+import MyAccount from "./components/pages/MyAccount";
+import Cart from "./components/pages/Cart";
 
 function App() {
   const [navToggle, setNavToggle] = useRecoilState(SidebarAtom);
@@ -65,11 +67,12 @@ function App() {
           <Route path="/product-details" element={<Productpage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
-          <Route path="/account" element={<Account />} />
+          <Route path="/account" element={<MyAccount />} />
           <Route
             path="/single-category/:category_id"
             element={<CategoryPage />}
           />
+          <Route path="/cart" element={<Cart />} />
           <Route path="/about-us" element={<AboutUs />} />
         </Routes>
       </div>

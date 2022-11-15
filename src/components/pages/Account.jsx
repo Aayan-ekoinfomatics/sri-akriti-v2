@@ -11,7 +11,7 @@ const Account = () => {
       {/* main flex */}
       <div className="w-[90%] mx-auto mb-16 md:grid grid-cols-2 md:gap-4 md:px-16">
         {/* flex item - orders*/}
-        <div className="w-full border-2 px-3 bg-[#E3E3E3] my-4 md:my-0">
+        <div className="w-full border-2 px-3 bg-[#E3E3E3] my-4 md:my-0 md:col-start-2 md:row-start-1 md:row-end-2">
           <div className="w-full flex justify-between md:px-3 py-2 lora text-[15px]">
             <h1 className="font-[500]">My Orders</h1>
             <h1 className="tracking-[2px]">All Orders</h1>
@@ -28,7 +28,7 @@ const Account = () => {
           </div>
         </div>
         {/* flex item - wishlist */}
-        <div className="w-full border-2 px-3 bg-[#E3E3E3] my-4 md:my-0">
+        <div className="w-full border-2 px-3 bg-[#E3E3E3] my-4 md:my-0 md:col-start-2">
           <div className="w-full flex justify-between md:px-3 py-2 lora text-[15px]">
             <h1 className="font-[500]">Wihslist</h1>
             <h1 className="tracking-[2px]">Edit</h1>
@@ -60,7 +60,7 @@ const Account = () => {
           </div>
         </div>
         {/* flex item - account*/}
-        <div className="w-full border-2 px-3 bg-[#E3E3E3] my-4 md:my-0 md:row-start-2 md:row-end-4">
+        <div className="w-full border-2 px-3 bg-[#E3E3E3] my-4 md:my-0  md:col-start-1 md:row-start-1 md:row-end-3">
           {/* flex item - account mobile  */}
           <div className="flex md:hidden w-full justify-between md:px-3 py-2 lora text-[14px]">
             <h1 className="font-[500]">My Account</h1>
@@ -97,7 +97,7 @@ const Account = () => {
             </div>
           </div>
           {/* flex item - account desktop */}
-          <div className="hidden md:block w-full px-3 bg-[#E3E3E3] my-4 md:my-0 md:row-start-2 md:row-end-4">
+          <div className="hidden md:block w-full px-3 bg-[#E3E3E3] my-4 md:my-0">
             <div className="w-full flex justify-between md:px-3 pb-2 pt-8 lora text-[14px]">
                 <h1 className="font-[500]">My Account</h1>
                 <h1 className="tracking-[2px]">Edit</h1>
@@ -140,7 +140,7 @@ const Account = () => {
           </div>
         </div>
         {/* flex item - address */}
-        <div className="w-full border-2 px-3 bg-[#E3E3E3] my-4 md:my-0">
+        <div className="w-full border-2 px-3 bg-[#E3E3E3] my-4 md:my-0 md:row-start-3">
           <div className="w-full flex justify-between md:px-3 py-2 lora text-[14px]">
             <h1 className="font-[500]">Address</h1>
             <h1 className="tracking-[2px]">Edit</h1>
@@ -152,7 +152,7 @@ const Account = () => {
           </div>
         </div>
         {/* flex item - card desktop */}
-        <div className="w-full border-2 px-3 bg-[#E3E3E3] my-4 md:my-0 md:block hidden md:col-start-2">
+        <div className="w-full border-2 px-3 bg-[#E3E3E3] my-4 md:my-0 md:block hidden">
           <div className="w-full flex justify-between md:px-3 py-4 lora text-[14px]">
             <h1 className="font-[500]">Cards</h1>
             <h1 className="tracking-[2px]">Edit</h1>

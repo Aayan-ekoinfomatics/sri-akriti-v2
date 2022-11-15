@@ -20,7 +20,7 @@ const Productpage = () => {
             {/* Home / Necklace / Type 1 Necklace Platinum */}
             {
               product_details?.product[0]?.breadcrumbs?.map((data, i) => (
-                <h1 className="poppins leading-[1px] cursor-pointer">{data?.link_name} {product_details?.product[0]?.breadcrumbs?.length === i + 1 ? '' : <span>/</span>} </h1>
+                <h1 className="poppins leading-[1px] cursor-pointer" key={i}>{data?.link_name} {product_details?.product[0]?.breadcrumbs?.length === i + 1 ? '' : <span>/</span>} </h1>
               ))
             }
           </div>

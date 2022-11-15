@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import arrow from '../../assets/icons/dropdown-arrow.svg'
+import country_names from '../../mockapi/countrySelectorApi'
 
 const SignUp = () => {
 
@@ -41,20 +42,17 @@ const SignUp = () => {
                         <div className='poppins text-[14px] flex-1 min-w-[28px] pl-1'>IN</div>
                         <div className='w-full flex justify-center items-center'><img src={arrow} className="w-[13px]" /></div>
                     </div>
-                    <input type="text" placeholder='Moblile Number' className=' poppins tracking-[2px] text-[13px] md:text-[15px] px-3 py-2 md:p-4 font-[300] flex-1 bg-[#e3e3e3]' name="name" id="" />
+                    <input type="number" min={0} placeholder='Moblile Number' className=' poppins tracking-[2px] text-[13px] md:text-[15px] px-3 py-2 md:p-4 font-[300] flex-1 bg-[#e3e3e3]' name="name" id="" />
                 </div>
-                <div className={`bg-[#f0f0f0e0] w-[80px] max-w-[120px] max-h-[180px] md:max-h-[200px] absolute translate-y-[150px] md:translate-y-[210px] left-0 flex flex-col justify-start items-center transition-all duration-400 ${ countryDropdown ? ' h-[200px] ease-in overflow-y-scroll py-2 px-1' : 'h-0 ease-out overflow-hidden' }`} >
-                    <h1 className='py-1 text-[14px]' >apapapa</h1>
-                    <h1 className='py-1 text-[14px]' >apapapa</h1>
-                    <h1 className='py-1 text-[14px]' >apapapa</h1>
-                    <h1 className='py-1 text-[14px]' >apapapa</h1>
-                    <h1 className='py-1 text-[14px]' >apapapa</h1>
-                    <h1 className='py-1 text-[14px]' >apapapa</h1>
-                    <h1 className='py-1 text-[14px]' >apapapa</h1>
-                    <h1 className='py-1 text-[14px]' >apapapa</h1>
+                <div className={`bg-[#f0f0f0e0] w-[80px] max-w-[120px] max-h-[180px] md:max-h-[200px] absolute translate-y-[150px] md:translate-y-[210px] left-0 flex flex-col justify-start items-center transition-all duration-400 md:duration-500 cursor-pointer ${ countryDropdown ? ' h-[200px] ease-in overflow-y-scroll py-2 px-1' : 'h-0 ease-out overflow-hidden' }`} >
+                    {
+                        country_names?.map((data, i) => (
+                            <button key={i} className='py-1 text-[14px] w-full hover:bg-[white]' >{data}</button>
+                        ))
+                    }
                 </div>
-                <input type="text" placeholder='Create Password' className='my-2 poppins tracking-[2px] text-[13px] md:text-[15px] px-3 py-2 md:p-4 font-[300] bg-[#e3e3e3]' name="name" id="" />
-                <input type="text" placeholder='Confirm Password' className='my-2 poppins tracking-[2px] text-[13px] md:text-[15px] px-3 py-2 md:p-4 font-[300] bg-[#e3e3e3]' name="name" id="" />
+                <input type="password" placeholder='Create Password' className='my-2 poppins tracking-[2px] text-[13px] md:text-[15px] px-3 py-2 md:p-4 font-[300] bg-[#e3e3e3]' name="name" id="" />
+                <input type="password" placeholder='Confirm Password' className='my-2 poppins tracking-[2px] text-[13px] md:text-[15px] px-3 py-2 md:p-4 font-[300] bg-[#e3e3e3]' name="name" id="" />
             </div>
             <div className='w-full md:w-[80%] md:mx-auto flex justify-between sm:justify-start items-center gap-3 pl-1'>
                 <input type="checkbox" name="" id="" />
@@ -66,7 +64,7 @@ const SignUp = () => {
         <div className='w-full flex justify-center items-center my-4 tracking-[2px] lora font-[400]'>
             <h1>Already a user ? <span className='underline'>Login</span></h1>
         </div>
-        </form>
+        </form> 
     </div>
   )
 }
