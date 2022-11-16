@@ -16,7 +16,7 @@ const Productpage = () => {
     <>
       <div className="md:flex gap-5 w-[95%] mx-auto ">
         <div className=" md:w-[50%]">
-          <div className="pl-2 flex gap-4 items-center tracking-[2px] text-[11px] md:text-[18px] my-3 md:my-10">
+          <div className="pl-3 flex gap-4 items-center md:tracking-[2px] text-[11px] md:text-[18px] my-5 md:my-10">
             {/* Home / Necklace / Type 1 Necklace Platinum */}
             {
               product_details?.product[0]?.breadcrumbs?.map((data, i) => (

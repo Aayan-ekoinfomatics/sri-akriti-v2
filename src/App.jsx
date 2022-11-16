@@ -25,6 +25,8 @@ import SignUp from "./components/pages/SignUp";
 import Account from "./components/pages/Account";
 import MyAccount from "./components/pages/MyAccount";
 import Cart from "./components/pages/Cart";
+import Checkout from "./components/pages/Checkout";
+import AddressAdd from "./components/pages/AddressAdd";
 
 function App() {
   const [navToggle, setNavToggle] = useRecoilState(SidebarAtom);
@@ -59,6 +61,9 @@ function App() {
 
       <div className="sticky top-0 left-0 right-0 bg-white pt-3 md:pt-8 z-[999]">
         <Navbar />
+        {/* <div className="hidden md:block bg-red-300 h-[200px] w-full">
+          
+        </div> */}
       </div>
       <div>
         <Routes>
@@ -68,11 +73,10 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/account" element={<MyAccount />} />
-          <Route
-            path="/single-category/:category_id"
-            element={<CategoryPage />}
-          />
+          <Route path="/add-address" element={<AddressAdd />} />
+          <Route path="/single-category/:category_id" element={<CategoryPage />}/>
           <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout" element={<Checkout />} />
           <Route path="/about-us" element={<AboutUs />} />
         </Routes>
       </div>

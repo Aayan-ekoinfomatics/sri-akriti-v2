@@ -14,12 +14,12 @@ const Cart = () => {
       
       {
         card_data?.products?.length != 0 ?
-        <div className="w-full md:flex md:w-[80%] mx-auto h-[300px] overflow-y-scroll">
+        <div className="w-[90%] md:flex md:w-[80%] mx-auto md:h-[400px]">
 
-        <div className="w-[93%] mx-auto md:max-w-[700px]">
+        <div className="w-full mx-auto my-auto h-[400px] overflow-y-scroll mb-5 md:mb-0">
           {
               card_data?.products?.map((data, i) => (
-                  <div className="flex justify-center items-center gap-2 md:gap-12 py-2 md:px-3 md:pr-10" key={i}>
+                  <div className="flex justify-center items-center gap-2 md:gap-12 py-2 md:px-3 md:pr-10 " key={i}>
                       <div className=" flex justify-center items-center">
                           <img src={data?.image} className="w-[95px]" />
                       </div>
@@ -74,8 +74,15 @@ const Cart = () => {
   
         </div>
         :
-        <div className="w-full flex justify-center items-center h-[60vh]">
-            404 not found
+        <div className="w-full flex justify-center items-center md:mt-20 mb-10">
+          <div className="flex flex-col justify-center items-center w-full ">
+              <div className="w-full text-center lora text-[20px] font-[500] my-12">
+                <h1>The Cart is Empty</h1>
+              </div>
+              <div className="w-full flex justify-center items-center my-12">
+                <button className="bg-[#3EDCFF] tracking-[3px] text-[15px] p-4">CONTINUE SHOPPING</button>
+              </div>
+          </div>
         </div>
       }
 

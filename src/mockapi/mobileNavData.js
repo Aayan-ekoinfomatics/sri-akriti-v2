@@ -30,12 +30,12 @@ const nav_data = {
       sub: ["SHOP BY STYLE", "SHOP FOR WHOM", "GIFTING"],
       route: "/about-us",
     },
-    // {
-    //   title: "WISHLIST",
-    //   id: 5,
-    //   sub: ["SHOP BY STYLE", "SHOP FOR WHOM", "GIFTING"],
-    //   route: "/wishlist",
-    // },
+    {
+      title: "WISHLIST",
+      id: 5,
+      sub: ["SHOP BY STYLE", "SHOP FOR WHOM", "GIFTING"],
+      route: "/wishlist",
+    },
     {
       title: "LOGIN",
       id: 6,
