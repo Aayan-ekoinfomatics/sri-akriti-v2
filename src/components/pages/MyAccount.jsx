@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import profile_data from '../../mockapi/myProfileApi'
 
 const MyAccount = () => {
@@ -16,7 +17,7 @@ const MyAccount = () => {
             <div className='w-full bg-[#E3E3E3] my-4 py-2'>
             <div className="w-[90%] mx-auto flex justify-between py-2 lora text-[15px]">
                 <h1 className="font-[500]">{profile_data?.my_orders?.header?.heading}</h1>
-                <h1 className="tracking-[2px]">{profile_data?.my_profile?.header?.sub_heading}</h1>
+                <Link to='/cart' className="tracking-[2px]">{profile_data?.my_profile?.header?.sub_heading}</Link>
             </div>
             {
               profile_data?.my_orders?.content?.map((data, i) => (
@@ -33,7 +34,7 @@ const MyAccount = () => {
             <div className='w-full bg-[#E3E3E3] my-4 py-2'>
             <div className="w-[90%] mx-auto flex justify-between py-2 lora text-[15px]">
                 <h1 className="font-[500]">{profile_data?.wishlist?.header?.heading}</h1>
-                <h1 className="tracking-[2px]">{profile_data?.my_profile?.header?.sub_heading}</h1>
+                <Link to='/wishlist' className="tracking-[2px]">{profile_data?.my_profile?.header?.sub_heading}</Link>
             </div>
             {
               profile_data?.wishlist?.content?.map((data, i) => (
@@ -94,7 +95,7 @@ const MyAccount = () => {
             <div className='w-full bg-[#E3E3E3] my-4 py-2 px-4 md:px-0'>
                 <div className="w-full flex justify-between md:px-3 py-2 lora text-[14px]">
                     <h1 className="font-[500]">{profile_data?.address?.header?.heading}</h1>
-                    <h1 className="tracking-[2px]">{profile_data?.address?.header?.sub_heading}</h1>
+                    <Link to='/add-address' className="tracking-[2px]">{profile_data?.address?.header?.sub_heading}</Link>
                 </div>
                 {
                     profile_data?.address?.content?.map((data, i) => (

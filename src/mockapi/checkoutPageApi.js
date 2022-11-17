@@ -27,13 +27,13 @@ const checkout = {
     item: {
         header:{heading: 'Item Details', sub_heading: 'Edit'},
         content: [
-            {id: 9072, image: img, title:'A Quiet Dawn Necklace in Platinum', price: '21000' , qty: '1'},
-            {id: 9072, image: img, title:'A Quiet Dawn Necklace in Platinum', price: '21000' , qty: '1'},
-            {id: 9072, image: img, title:'A Quiet Dawn Necklace in Platinum', price: '21000' , qty: '1'},
-            {id: 9072, image: img, title:'A Quiet Dawn Necklace in Platinum', price: '21000' , qty: '1'},
-            {id: 9072, image: img, title:'A Quiet Dawn Necklace in Platinum', price: '21000' , qty: '1'},
-            {id: 9072, image: img, title:'A Quiet Dawn Necklace in Platinum', price: '21000' , qty: '1'},
-            {id: 9072, image: img, title:'A Quiet Dawn Necklace in Platinum', price: '21000' , qty: '1'},
+            {id: 'SJ PTB 307', image: img, title:'A Quiet Dawn Necklace in Platinum', price: '21000', discount_price: '18000', qty: '1'},
+            {id: 'SJ PTB 307', image: img, title:'A Quiet Dawn Necklace in Platinum', price: '21000', discount_price: '18000', qty: '1'},
+            {id: 'SJ PTB 307', image: img, title:'A Quiet Dawn Necklace in Platinum', price: '21000', discount_price: '18000', qty: '1'},
+            {id: 'SJ PTB 307', image: img, title:'A Quiet Dawn Necklace in Platinum', price: '21000', discount_price: '18000', qty: '1'},
+            {id: 'SJ PTB 307', image: img, title:'A Quiet Dawn Necklace in Platinum', price: '21000', discount_price: '18000', qty: '1'},
+            {id: 'SJ PTB 307', image: img, title:'A Quiet Dawn Necklace in Platinum', price: '21000', discount_price: '18000', qty: '1'},
+            {id: 'SJ PTB 307', image: img, title:'A Quiet Dawn Necklace in Platinum', price: '21000', discount_price: '18000', qty: '1'},
         ]
     },
     checkout_data: {

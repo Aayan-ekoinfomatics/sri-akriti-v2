@@ -14,13 +14,15 @@ const Navbar = () => {
   const [navToggle, setNavToggle] = useRecoilState(SidebarAtom);
 
   const [searchItem, setSearchItem] = useState("");
+  const [navHoverShow, setNavHoverShow] = useState(false);
 
   // useEffect(() => {
   //   console.log(searchItem);
   // }, [searchItem]);
 
   return (
-    <header className="w-full md:py-2 flex justify-end items-end z-[999]">
+    <>
+        <header className="w-full md:py-2 flex justify-end items-end z-[999]">
       {/* desktop menu */}
       <nav className="hidden md:flex justify-evenly pb-5 w-[95%] mx-auto">
         <div className="md:w-[100px] lg:w-[180px] flex justify-center items-center">
@@ -30,47 +32,14 @@ const Navbar = () => {
         </div>
         <ul className="flex justify-evenly items-center w-full gill-sans-nav tracking-wider lg:pl-6 font-[300] md:text-sm lg:text-lg xl:text-xl ">
           {nav_data?.nav.slice(0, 7)?.map((data, i) => (
-            // <li key={i}>
-            //   {
-            //     data?.title === 'COLLECTION' ?
-            //     <NavLink
-            //     to={data?.route}
-            //     className={({ isActive }) =>
-            //       isActive
-            //         ? "scale-x-105 transition-all duration-150 font-[500]"
-            //         : " transition-all duration-150 "
-            //     }
-            //   >
-            //     <li className="cursor-pointer group flex flex-col w-full">
-            //       {" "}
-            //       <p>{data?.title}</p>
-            //       <span className="h-[1px] max-w-0 group-hover:max-w-full transition-all duration-300 bg-black"></span>
-            //     </li>
-            //   </NavLink>
-            //     :
-            //     <Link
-            //     // to={data?.route}
-            //     className={({ isActive }) =>
-            //       isActive
-            //         ? "scale-x-105 transition-all duration-150 font-[500]"
-            //         : " transition-all duration-150 "
-            //     }
-            //   >
-            //     <li className="cursor-pointer group flex flex-col w-full">
-            //       {" "}
-            //       <p>{data?.title}</p>
-            //       <span className="h-[1px] max-w-0 group-hover:max-w-full transition-all duration-300 bg-black"></span>
-            //     </li>
-            //   </Link>
-            //   }
-            // </li>
             <NavLink
               key={i}
               to={data?.route}
+              onMouseEnter={() => setNavHoverShow(true)} onMouseLeave={() => setNavHoverShow(false)}
               className={({ isActive }) =>
                 isActive
                   ? "scale-x-105 transition-all duration-150 font-[500]"
-                  : " transition-all duration-150 "
+                  : " transition-all duration-150"
               }
             >
               <li className="cursor-pointer group flex flex-col w-full">
@@ -86,6 +55,7 @@ const Navbar = () => {
           <img src={search} className=" w-[25px]" />
         </div>
       </nav>
+      
 
       {/* mobile menu */}
       <div className="sticky w-full flex flex-col items-center mb-4 md:hidden">
@@ -128,6 +98,33 @@ const Navbar = () => {
         </div> */}
       </div>
     </header>
+    <div className={`hidden absolute md:flex justify-center items-center w-full transition-all duration-300 overflow-hidden bg-white shadow-lg ${navHoverShow ? ' h-[280px] ease-in' : 'h-0 ease-out'} `}  onMouseEnter={() => setNavHoverShow(true)} onMouseLeave={() => setNavHoverShow(false)}>
+      <div className="w-[90%] mx-auto flex justify-evenly">
+        <ul className="list-none poppins">
+          <h1 className="text-[16px] font-[500]" >SHOP BY STYLE</h1>
+          <li className="text-[12px] py-2" >Best Seller</li>
+          <li className="text-[12px] py-2" >Chian Necklace</li>
+          <li className="text-[12px] py-2" >Charm Necklace</li>
+          <li className="text-[12px] py-2" >Pendant Necklace</li>
+          <li className="text-[12px] py-2" >Pendant & Earing set</li> 
+          <li className="text-[12px] py-2" >All Necklaces & Pendants</li> 
+        </ul>
+        <ul className="list-none poppins">
+          <h1 className="text-[16px] font-[500]" >SHOP FOR WHOM</h1>
+          <li className="text-[12px] py-2" >Women</li>
+          <li className="text-[12px] py-2" >Men</li>
+          <li className="text-[12px] py-2" >Unisex</li>
+        </ul>
+        <ul className="list-none poppins">
+          <h1 className="text-[16px] font-[500]" >GIFTING</h1>
+          <li className="text-[12px] py-2" >Birthday Gift</li>
+          <li className="text-[12px] py-2" >Aniversary Gift</li>
+          <li className="text-[12px] py-2" >Valentine Gift</li>
+          <li className="text-[12px] py-2" >Personal Gift</li>
+          </ul>
+      </div>
+    </div>
+    </>
   );
 };
 

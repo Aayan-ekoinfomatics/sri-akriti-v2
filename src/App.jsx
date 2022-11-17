@@ -22,11 +22,12 @@ import SingleCategoryProducts from "./components/pages/SingleCategoryProducts";
 import CategoryPage from "./components/pages/CategoryPage";
 import Login from "./components/pages/Login";
 import SignUp from "./components/pages/SignUp";
-import Account from "./components/pages/Account";
+// import Account from "./components/pages/Account";
 import MyAccount from "./components/pages/MyAccount";
 import Cart from "./components/pages/Cart";
 import Checkout from "./components/pages/Checkout";
 import AddressAdd from "./components/pages/AddressAdd";
+import Wishlist from "./components/pages/Wishlist";
 
 function App() {
   const [navToggle, setNavToggle] = useRecoilState(SidebarAtom);
@@ -59,7 +60,7 @@ function App() {
         />
       </div>
 
-      <div className="sticky top-0 left-0 right-0 bg-white pt-3 md:pt-8 z-[999]">
+      <div className="sticky top-0 left-0 right-0 bg-white pt-3 md:pt-8 z-[999] shadow-lg">
         <Navbar />
         {/* <div className="hidden md:block bg-red-300 h-[200px] w-full">
           
@@ -76,6 +77,7 @@ function App() {
           <Route path="/add-address" element={<AddressAdd />} />
           <Route path="/single-category/:category_id" element={<CategoryPage />}/>
           <Route path="/cart" element={<Cart />} />
+          <Route path="/wishlist" element={<Wishlist />} /> 
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/about-us" element={<AboutUs />} />
         </Routes>
