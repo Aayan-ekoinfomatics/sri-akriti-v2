@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import arrow from '../../assets/icons/dropdown-arrow.svg'
 import country_names from '../../mockapi/countrySelectorApi'
 
@@ -62,7 +63,7 @@ const SignUp = () => {
                 <button className='bg-black text-white poppins text-[14px] md:text-[16px] py-4 px-16 font-[300] tracking-[3px] w-full sm:w-auto'>SIGN UP</button>
             </div>
         <div className='w-full flex justify-center items-center my-4 tracking-[2px] lora font-[400]'>
-            <h1>Already a user ? <span className='underline'>Login</span></h1>
+            <h1>Already a user ? <Link to='/account' className='underline'>Login</Link></h1>
         </div>
         </form> 
     </div>

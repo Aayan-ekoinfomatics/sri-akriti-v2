@@ -60,7 +60,7 @@ function App() {
         />
       </div>
 
-      <div className="sticky top-0 left-0 right-0 bg-white pt-3 md:pt-8 z-[999] shadow-lg">
+      <div className="sticky top-0 left-0 right-0 bg-white pt-3 md:pt-8 z-[999] shadow-md">
         <Navbar />
         {/* <div className="hidden md:block bg-red-300 h-[200px] w-full">
           

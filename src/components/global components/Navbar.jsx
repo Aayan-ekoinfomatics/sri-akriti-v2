@@ -7,6 +7,7 @@ import cross from "../../assets/icons/cross.svg";
 import transparent_logo from "../../assets/icons/transparent-logo.png";
 import { Link, NavLink } from "react-router-dom";
 import nav_data from "../../mockapi/mobileNavData";
+import heart from '../../assets/icons/heart-outline.svg'
 import SidebarAtom from "../../recoil/atoms/sidebar/SidebarAtom";
 import { useRecoilState } from "recoil";
 
@@ -51,6 +52,7 @@ const Navbar = () => {
           ))}
         </ul>
         <div className="w-[10%] gap-4 lg:gap-8 hidden md:flex justify-end md:justify-start items-center">
+          <img src={heart} className=" w-[25px]" />
           <img src={cart} className=" w-[25px]" />
           <img src={search} className=" w-[25px]" />
         </div>
