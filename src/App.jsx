@@ -28,6 +28,7 @@ import Cart from "./components/pages/Cart";
 import Checkout from "./components/pages/Checkout";
 import AddressAdd from "./components/pages/AddressAdd";
 import Wishlist from "./components/pages/Wishlist";
+import OrderList from "./components/pages/OrderList";
 
 function App() {
   const [navToggle, setNavToggle] = useRecoilState(SidebarAtom);
@@ -77,6 +78,7 @@ function App() {
           <Route path="/add-address" element={<AddressAdd />} />
           <Route path="/single-category/:category_id" element={<CategoryPage />}/>
           <Route path="/cart" element={<Cart />} />
+          <Route path="/orders" element={<OrderList />} />
           <Route path="/wishlist" element={<Wishlist />} /> 
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/about-us" element={<AboutUs />} />

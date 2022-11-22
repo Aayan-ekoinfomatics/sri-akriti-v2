@@ -11,6 +11,7 @@ import down_arrow from "../../assets/icons/Arrow-sort.svg";
 const Sidebar = () => {
   const [sidebarToggle, setSidebarToggle] = useRecoilState(SidebarAtom);
   const [navListToggle, setNavListToggle] = useState(null);
+  const [navSubListToggle, setNavSubListToggle] = useState(null);
 
   return (
     <div
@@ -56,19 +57,35 @@ const Sidebar = () => {
                 }`}
               >
                 {data?.sub?.map((datas, index) => (
-                  <ul
-                    key={index}
-                    className="text-right py-2 poppins tracking-[2px] text-[#696969d5] w-[90%] mx-auto"
+                  <React.Fragment key={index}>
+                  <ul className="text-right py-2 poppins tracking-[2px] text-[#696969d5] w-[90%] mx-auto"
                   >
                     <li className="w-full flex justify-between items-center py-1 font-[300] text-[13px]">
                       {" "}
-                      <span className="ml-5">
-                        <img src={arrow_left} className="" alt="" />
+                      <span className="ml-5" onClick={() => {
+                        if (navSubListToggle === datas?.sub_title) {
+                          setNavSubListToggle(null);
+                        } else {
+                          setNavSubListToggle(datas?.sub_title);
+                        }
+                      }}>
+                        <img src={ navSubListToggle === datas?.sub_title ? down_arrow : arrow_left} className="" alt=""/>
                       </span>{" "}
-                      {datas}
+                      {datas?.sub_title}
                     </li>
                   </ul>
-                ))}
+                  {}
+                  <div className={`transition-all duration-300 ${navSubListToggle === datas?.sub_title ? 'h-[150px] ease-in' : 'h-0 overflow-y-hidden ease-out'}`}>
+                    <ul>
+                      {
+                        datas?.sub_content?.map((data, sub_index) => (
+                          <li key={sub_index} className="poppins text-[12px] text-right py-1 pr-3">{data?.link_name}</li>
+                        ))
+                      }
+                    </ul>
+                  </div>
+                    </React.Fragment>
+                      ))}
               </div>
             </div>
           ))}
